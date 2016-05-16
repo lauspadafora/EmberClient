@@ -20,5 +20,31 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
+  app.import('bower_components/AdminLTE/bootstrap/css/bootstrap.min.css');
+  app.import('bower_components/AdminLTE/dist/css/AdminLTE.min.css');
+  app.import('bower_components/AdminLTE/dist/css/skins/_all-skins.min.css');
+  app.import('bower_components/AdminLTE/plugins/iCheck/flat/blue.css');
+  app.import('bower_components/AdminLTE/plugins/morris/morris.css');
+  app.import('bower_components/AdminLTE/plugins/jvectormap/jquery-jvectormap-1.2.2.css');
+  app.import('bower_components/AdminLTE/plugins/datepicker/datepicker3.css');
+  app.import('bower_components/AdminLTE/plugins/daterangepicker/daterangepicker-bs3.css');
+  app.import('bower_components/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css');
+
+  app.import('bower_components/AdminLTE/plugins/jQuery/jQuery-2.2.0.min.js');
+  app.import('bower_components/AdminLTE/bootstrap/js/bootstrap.min.js');
+  app.import('bower_components/AdminLTE/plugins/morris/morris.min.js');
+  app.import('bower_components/AdminLTE/plugins/sparkline/jquery.sparkline.min.js');
+  app.import('bower_components/AdminLTE/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js');
+  app.import('bower_components/AdminLTE/plugins/jvectormap/jquery-jvectormap-world-mill-en.js');
+  app.import('bower_components/AdminLTE/plugins/knob/jquery.knob.js');
+  app.import('bower_components/AdminLTE/plugins/daterangepicker/daterangepicker.js');
+  app.import('bower_components/AdminLTE/plugins/datepicker/bootstrap-datepicker.js');
+  app.import('bower_components/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js');
+  app.import('bower_components/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js');
+  app.import('bower_components/AdminLTE/plugins/fastclick/fastclick.min.js');
+  app.import('bower_components/AdminLTE/dist/js/app.min.js');
+  app.import('bower_components/AdminLTE/dist/js/pages/dashboard.js');
+  app.import('bower_components/AdminLTE/dist/js/demo.js');
+
   return app.toTree();
 };
