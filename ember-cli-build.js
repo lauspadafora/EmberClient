@@ -29,6 +29,7 @@ module.exports = function(defaults) {
   app.import('bower_components/AdminLTE/plugins/datepicker/datepicker3.css');
   app.import('bower_components/AdminLTE/plugins/daterangepicker/daterangepicker-bs3.css');
   app.import('bower_components/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css');
+  app.import('bower_components/AdminLTE/plugins/datatables/dataTables.bootstrap.css');  
 
   app.import('bower_components/AdminLTE/plugins/jQuery/jQuery-2.2.0.min.js');
   app.import('bower_components/AdminLTE/bootstrap/js/bootstrap.min.js');
@@ -42,9 +43,11 @@ module.exports = function(defaults) {
   app.import('bower_components/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js');
   app.import('bower_components/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js');
   app.import('bower_components/AdminLTE/plugins/fastclick/fastclick.min.js');
-  app.import('bower_components/AdminLTE/dist/js/app.min.js');
-  app.import('bower_components/AdminLTE/dist/js/pages/dashboard.js');
+  app.import('bower_components/AdminLTE/plugins/datatables/jquery.dataTables.min.js');
+  app.import('bower_components/AdminLTE/plugins/datatables/dataTables.bootstrap.min.js');
+  app.import('bower_components/AdminLTE/dist/js/app.min.js');  
   app.import('bower_components/AdminLTE/dist/js/demo.js');
+
 
   return app.toTree();
 };
