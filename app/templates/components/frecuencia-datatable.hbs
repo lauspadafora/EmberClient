@@ -1,38 +1,34 @@
 <table id="example1" class="table table-bordered table-striped">
 	<thead>
 		<tr>
-			<th>Rendering engine</th>
-			<th>Browser</th>
-			<th>Platform(s)</th>
-			<th>Engine version</th>
-			<th>CSS grade</th>
+			<th>#</th>
+			<th>Nombre</th>
+			<th>Fecha de Creación</th>
+			<th>Creado Por</th>
+			<th>Acciones</th>
 		</tr>
 	</thead>
-	<tbody>
-	<tr>
-			<td>{{item.nombre}}</td>
-			<td>Internet Explorer 4.0</td>
-			<td>Win 95+</td>
-			<td> 4</td>
-			<td>X</td>
-		</tr>
-	 	{{#each model as |frecuencia|}}
+	<tbody>	
+	 	{{#each frecuencias as |frecuencia|}}
 		<tr>
-			<td>{{item.nombre}}</td>
-			<td>Internet Explorer 4.0</td>
-			<td>Win 95+</td>
-			<td> 4</td>
-			<td>X</td>
+			<td>{{frecuencia.id}}</td>
+			<td>{{frecuencia.nombre}}</td>
+			<td>{{frecuencia.created_at}}</td>
+			<td>{{frecuencia.created_by}}</td>	
+			<td>
+				{{#link-to 'frecuencia.show' frecuencia.id class='btn btn-success btn-xs glyphicon glyphicon-info-sign'}}{{/link-to}}
+				{{#link-to 'frecuencia.edit' frecuencia.id class='btn btn-primary btn-xs glyphicon glyphicon-edit'}}{{/link-to}}
+				<button type="button" class="btn btn-danger btn-xs glyphicon glyphicon-trash" {{action 'buttonClicked' frecuencia}}></button>
+        	</td>
 		</tr>
 		{{/each}}
 	</tbody>
 	<tfoot>
 		<tr>
-			<th>Rendering engine</th>
-			<th>Browser</th>
-			<th>Platform(s)</th>
-			<th>Engine version</th>
-			<th>CSS grade</th>
+			<th>#</th>
+			<th>Nombre</th>
+			<th>Fecha de Creación</th>
+			<th>Creado Por</th>
 		</tr>
 	</tfoot>
 </table>

@@ -4,9 +4,9 @@ import attr from 'ember-data/attr';
 export default Model.extend({
   nombre: attr('string'),
   created_at: attr('string'),
-  created_by: attr('number'),
+  created_by: attr('string'),
   updated_at: attr('string'),
-  updated_by: attr('number'),
+  updated_by: attr('string'),
   deleted_at: attr('string'),
-  deleted_by: attr('number')
+  deleted_by: attr('string')
 });

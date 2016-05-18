@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-	didInsertElement() {
-	}
+	actions: {
+    	buttonClicked(param) {
+      		this.sendAction('action', param);
+    	}
+ 	}
 });

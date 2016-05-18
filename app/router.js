@@ -6,9 +6,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-    this.route('frecuencia', function() {
-        this.route('new');
-    });
+  this.route('frecuencia', function() {
+    this.route('new');
+    this.route('show', { path: '/show/:id' });
+    this.route('edit', { path: '/edit/:id' });    
+  });
 });
 
 export default Router;

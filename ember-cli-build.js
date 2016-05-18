@@ -20,6 +20,7 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
+  //Styles
   app.import('bower_components/AdminLTE/bootstrap/css/bootstrap.min.css');
   app.import('bower_components/AdminLTE/dist/css/AdminLTE.min.css');
   app.import('bower_components/AdminLTE/dist/css/skins/_all-skins.min.css');
@@ -30,7 +31,7 @@ module.exports = function(defaults) {
   app.import('bower_components/AdminLTE/plugins/daterangepicker/daterangepicker-bs3.css');
   app.import('bower_components/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css');
   app.import('bower_components/AdminLTE/plugins/datatables/dataTables.bootstrap.css');  
-
+  //Scripts
   app.import('bower_components/AdminLTE/plugins/jQuery/jQuery-2.2.0.min.js');
   app.import('bower_components/AdminLTE/bootstrap/js/bootstrap.min.js');
   app.import('bower_components/AdminLTE/plugins/morris/morris.min.js');
@@ -47,7 +48,16 @@ module.exports = function(defaults) {
   app.import('bower_components/AdminLTE/plugins/datatables/dataTables.bootstrap.min.js');
   app.import('bower_components/AdminLTE/dist/js/app.min.js');  
   app.import('bower_components/AdminLTE/dist/js/demo.js');
-
+  //Fonts
+  app.import('bower_components/AdminLTE/bootstrap/fonts/glyphicons-halflings-regular.ttf', {
+    destDir: 'fonts'
+  }); 
+  app.import('bower_components/AdminLTE/bootstrap/fonts/glyphicons-halflings-regular.woff', {
+    destDir: 'fonts'
+  });
+  app.import('bower_components/AdminLTE/bootstrap/fonts/glyphicons-halflings-regular.woff2', {
+    destDir: 'fonts'
+  });
 
   return app.toTree();
 };
