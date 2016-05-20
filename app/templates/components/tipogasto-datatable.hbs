@@ -1,0 +1,34 @@
+<table id="example1" class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Nombre</th>
+			<th>Fecha de Creación</th>
+			<th>Creado Por</th>
+			<th>Acciones</th>
+		</tr>
+	</thead>
+	<tbody>	
+	 	{{#each tiposgastos as |tipogasto|}}
+		<tr>
+			<td>{{tipogasto.id}}</td>
+			<td>{{tipogasto.nombre}}</td>
+			<td>{{tipogasto.created_at}}</td>
+			<td>{{tipogasto.created_by}}</td>	
+			<td>
+				{{#link-to 'tipogasto.show' tipogasto.id class='btn btn-success btn-xs glyphicon glyphicon-info-sign'}}{{/link-to}}
+				{{#link-to 'tipogasto.edit' tipogasto.id class='btn btn-primary btn-xs glyphicon glyphicon-edit'}}{{/link-to}}
+				<button type="button" class="btn btn-danger btn-xs glyphicon glyphicon-trash" {{action 'buttonClicked' tipogasto}}></button>
+        	</td>
+		</tr>
+		{{/each}}
+	</tbody>
+	<tfoot>
+		<tr>
+			<th>#</th>
+			<th>Nombre</th>
+			<th>Fecha de Creación</th>
+			<th>Creado Por</th>
+		</tr>
+	</tfoot>
+</table>

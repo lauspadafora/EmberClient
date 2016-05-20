@@ -1,0 +1,14 @@
+<form class="form-horizontal">
+  <div class="box-body">
+    <div class="form-group">
+      <label for="" class="col-sm-2 control-label">Nombre</label>
+      <div class="col-sm-10">
+        {{input type="text" value=tipogasto.nombre class="form-control" placeholder="Nombre del tipo de gasto"}}
+      </div>
+    </div>
+  </div><!-- /.box-body -->
+  <div class="box-footer">
+    {{#link-to 'tipogasto' class='btn btn-default'}}Volver{{/link-to}}
+    <button type="button" class="btn bg-purple pull-right" {{action 'buttonClicked' tipogasto}}>{{buttonLabel}}</button>
+  </div><!-- /.box-footer -->
+</form>

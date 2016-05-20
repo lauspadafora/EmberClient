@@ -16,9 +16,7 @@ export default Ember.Route.extend({
 
   actions: {
     saveFrecuencia(newFrecuencia) {
-      newFrecuencia.save().then(() => {        
-        this.transitionTo('frecuencia');
-      });       
+      newFrecuencia.save().then(() => { this.transitionTo('frecuencia'); });       
     },
     willTransition() {          
       this.controller.get('model').rollbackAttributes();
